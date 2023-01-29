@@ -1,0 +1,9 @@
+[Unit]
+Description=File Integrity Monitoring by KsrvcO
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/script -q -c '/bin/fim/fim.sh' /dev/null
+
+[Install]
+WantedBy=multi-user.target
